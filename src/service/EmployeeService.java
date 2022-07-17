@@ -1,4 +1,17 @@
+package service;
+import exception.EmployeeAlreadyAddedException;
+import exception.EmployeeNotFoundException;
+import exception.EmployeeStoragelsFullException;
+import model.Employee;
+import java.util.Objects;
+public @interface Service
+@Service
+public class EmployeeService {
+    public final Employee[] employees = new Employee;
+    private Employee objects;
 
+    public Employee addEmplyoee(String name, String surname) {
+        Employee employee = new Employee(name, surname);
         int index = -1;
         Objects objects = null;
         for (int i = 0; i < employees.length; i++) {
